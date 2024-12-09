@@ -1,0 +1,116 @@
+/* Section Styles */
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container1 {
+    width: 600px;
+    height: auto;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+/* Progress Bar Styles */
+.bar {
+    font-size: 23px;
+    margin-bottom: 30px;
+}
+
+.technical-bars .bar {
+    margin-top: 40px;
+}
+
+.technical-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 0;
+    animation: showText 0.5s 0.5s linear forwards;
+}
+
+/* Progress Line Styles */
+.technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #ccc;
+}
+
+.technical-bars .bar .progress-line span {
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    width: 0%;
+    animation: progress-bar 2s cubic-bezier(1, 0, 0, 5, 1) forwards;
+}
+
+@keyframes progress-bar {
+    100% {
+        width: 100%;
+    }
+}
+
+.technical-bars .bar .progress-line.html span {
+    width: 98%;
+    animation: progress-bar 2s cubic-bezier(1, 0, 0, 5, 1) forwards;
+}
+.technical-bars .bar .progress-line.CSS span {
+    width: 95%;
+    animation: progress-bar 2s cubic-bezier(1, 0, 0, 5, 1) forwards;
+}
+.technical-bars .bar .progress-line.js span {
+    width: 80%;
+    animation: progress-bar 2s cubic-bezier(1, 0, 0, 5, 1) forwards;
+}
+.technical-bars .bar .progress-line.REACT span {
+    width: 70%;
+    animation: progress-bar 2s cubic-bezier(1, 0, 0, 5, 1) forwards;
+}
+.technical-bars .bar .progress-line.BTS span {
+    width: 95%;
+    animation: progress-bar 2s cubic-bezier(1, 0, 0, 5, 1) forwards;
+}
+.technical-bars .bar .progress-line.python span {
+    width: 80%;
+    animation: progress-bar 2s cubic-bezier(1, 0, 0, 5, 1) forwards;
+}
+.technical-bars .bar .progress-line.node span {
+    width: 70%;
+    animation: progress-bar 2s cubic-bezier(1, 0, 0, 5, 1) forwards;
+}
+
+/* Percentage text animation */
+.progress-line span::after {
+    content: "0%";
+    position: absolute;
+    top: -28px;
+    right: -20px;
+    font-size: 12px;
+    background-color: #000;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText 1s 1s linear forwards;
+}
+
+/* Show Text animation */
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
